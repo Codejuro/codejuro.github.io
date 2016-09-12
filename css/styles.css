@@ -115,7 +115,6 @@ body {
   margin-bottom: 1vmax;
 }
 .about p .keyword {
-  font-size: 1.5em;
   font-family: "Comfortaa", sans-serif;
   color: #fbb040;
 }
@@ -287,6 +286,9 @@ body {
 .contact textarea.cinp {
   flex: 1;
 }
+.contact .keyword {
+  font-size: 1.3em;
+}
 @media (orientation: landscape) {
   .item {
     height: 100%;
@@ -442,6 +444,9 @@ body {
   .fa {
     font-size: 3em;
     margin: 1vmin;
+  }
+  .keyword {
+    font-size: 1.5em;
   }
 }
 .item:last-child .inner {
