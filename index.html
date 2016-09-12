@@ -62,7 +62,7 @@ title: Codejuro
                 <div class="team-slider">
                   <div class="tm-items">
                     {% for member in site.team %}
-                    <div class="tm-item" onclick="currentDiv({{ forloop.index | plus:'1' }})">
+                    <div class="tm-item" onclick="currentDiv({{ forloop.index }})">
                       <div class="tm-item-title">{{ member.shortname }}</div>
                       <div class="tm-item-subtitle">{{ member.position }}</div>
                     </div>
