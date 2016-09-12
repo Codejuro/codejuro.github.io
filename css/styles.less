@@ -48,6 +48,7 @@ body {
 
 
 #main {
+    .noselect;
     background-color: rgb(25,25,25);
     .inner {
         background-image: url("/img/header-bg.png");
@@ -86,16 +87,19 @@ body {
 }
 
 
-.about p {
-    margin-bottom: 1vmax;
+.about {
+    .noselect;
 
-    .keyword {
-        font-size: 1.5em;
-        font-family: "Comfortaa", sans-serif;
-        color: @yellow;
+    p {
+        margin-bottom: 1vmax;
+        
+        .keyword {
+            font-size: 1.5em;
+            font-family: "Comfortaa", sans-serif;
+            color: @yellow;
+        }
     }
 }
-
 
 .quote {
     font-size: 1.5em;
