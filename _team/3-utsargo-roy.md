@@ -1,5 +1,5 @@
 ---
-layout: team
+layout: none
 title: "Utsargo Roy"
 pic: "/img/team/3.jpg"
 position: "Lead UX Designer"

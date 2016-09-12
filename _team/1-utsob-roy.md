@@ -1,5 +1,5 @@
 ---
-layout: team
+layout: none
 title: "Utsob Roy"
 pic: "/img/team/1.jpg"
 position: "Code Maestro"

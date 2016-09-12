@@ -1,5 +1,5 @@
 ---
-layout: team
+layout: none
 title: "Saiful Islam Plabon"
 pic: "/img/team/2.jpg"
 position: "Code Maestro"

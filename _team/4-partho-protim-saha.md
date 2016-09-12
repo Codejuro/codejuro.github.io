@@ -1,5 +1,5 @@
 ---
-layout: team
+layout: none
 title: "Partho Protim Saha"
 pic: "/img/team/4.jpg"
 position: "Art Advisor"
