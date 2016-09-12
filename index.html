@@ -84,6 +84,7 @@ title: Codejuro
           <div class="inner">
             <div class="section-title">Contact</div>
             <div class="section-content">
+              <div class="thanks-text"><p>Thanks for contacting us. We will contact you as soon as possible.</p><i class="fa fa-times" onclick="closeFunc()"></i></div>
               <form class="contact" name="sentMessage" id="contactForm" action="https://formspree.io/codejuro@gmail.com" method="POST" novalidate>
                 <input type="hidden" name="_next" value="{{ site.url }}?success=1" />
                 <input class="cinp" name="name" type="text" value="" placeholder="Name" required data-validation-required-message="Please enter your name."/>
@@ -137,6 +138,26 @@ title: Codejuro
              window.location.href = window.location.href.replace(/#.*/,'');
            };
          });
+
+         function getParameterByName(name, url) {
+           if (!url) url = window.location.href;
+           name = name.replace(/[\[\]]/g, "\\$&");
+           var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+               results = regex.exec(url);
+           if (!results) return null;
+           if (!results[2]) return '';
+           return decodeURIComponent(results[2].replace(/\+/g, " "));
+         }
+
+         if (getParameterByName('success') == "1") {
+           $('.item').removeClass('expanded');
+           $('#contact').addClass('expanded');
+           $('.thanks-text').css({"display": "flex"});
+         }
+
+         function closeFunc(e) {
+             $('.thanks-text').css({"display": "none"});
+         }
         </script>
   </body>
 </html>

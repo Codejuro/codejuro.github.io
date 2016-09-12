@@ -50,7 +50,7 @@ body {
 #main {
     .noselect;
     background-color: rgb(25,25,25);
-    .inner {
+    .inner { 
         background-image: url("/img/header-bg.png");
         background-size: auto 100vh;
     }
@@ -242,6 +242,23 @@ body {
         display: flex;
     }
     
+}
+
+.thanks-text {
+    display: none;
+    flex-direction: row;
+    min-height: 10vmax;
+    padding: 10px;
+    color: @yellow;
+    background-color: #181818;
+    border: none;
+    border-radius: 10px;
+    font-size: 2em;
+
+    .fa {
+        color: white;
+        font-size: 20px;
+    }
 }
 
 .contact {

@@ -232,6 +232,21 @@ body {
 .team .prof-current {
   display: flex;
 }
+.thanks-text {
+  display: none;
+  flex-direction: row;
+  min-height: 10vmax;
+  padding: 10px;
+  color: #fbb040;
+  background-color: #181818;
+  border: none;
+  border-radius: 10px;
+  font-size: 2em;
+}
+.thanks-text .fa {
+  color: white;
+  font-size: 20px;
+}
 .contact {
   display: flex;
   flex-direction: column;
