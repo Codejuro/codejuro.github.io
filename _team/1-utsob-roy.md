@@ -1,7 +1,7 @@
 ---
-layout: none
+layout: team
 title: "Utsob Roy"
-pic: "/img/team/1.jpg"
+pic: "1.jpg"
 position: "Code Maestro"
 social:
   - title: twitter

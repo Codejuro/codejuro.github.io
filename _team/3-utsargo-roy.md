@@ -1,7 +1,7 @@
 ---
-layout: none
+layout: team
 title: "Utsargo Roy"
-pic: "/img/team/3.jpg"
+pic: "3.jpg"
 position: "Lead UX Designer"
 social:
   - title: facebook

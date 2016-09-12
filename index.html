@@ -26,9 +26,10 @@ layout: default
           <div class="section-content skew">
             <div class="team">
               {% for member in site.team %}
+              {{ member.title }}
               <div class="profile {% if forloop.first == true %} prof-current {% endif %}">
                 <div class="img-wrapper">
-                  <img alt="" src="{{ member.pic }}"/>
+                  <img alt="" src="/img/team/{{ member.pic }}"/>
                 </div>
                 <div class="title">{{ member.title }}</div>
                 <div class="subtitle">{{ member.position }}</div>
@@ -37,7 +38,7 @@ layout: default
               <div class="team-slider">
                 <div class="tm-items">
                   {% for member in site.team %}
-                  <div class="tm-item" onclick="currentDiv({{\ forloop.index | plus:'1' }})">
+                  <div class="tm-item" onclick="currentDiv({{ forloop.index | plus:'1' }})">
                     <div class="tm-item-title">{{ member.title }}</div>
                     <div class="tm-item-subtitle">{{ member.position }}</div>
                   </div>

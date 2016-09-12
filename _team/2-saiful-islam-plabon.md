@@ -1,7 +1,7 @@
 ---
-layout: none
+layout: team
 title: "Saiful Islam Plabon"
-pic: "/img/team/2.jpg"
+pic: "2.jpg"
 position: "Code Maestro"
 social:
   - title: facebook

@@ -1,7 +1,7 @@
 ---
-layout: none
+layout: team
 title: "Partho Protim Saha"
-pic: "/img/team/4.jpg"
+pic: "4.jpg"
 position: "Art Advisor"
 social:
   - title: facebook
