@@ -143,6 +143,15 @@ body {
   font-size: 2em;
   color: #fbb040;
 }
+.team .profile .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.team .profile .social .socicon {
+  color: white;
+  text-decoration: none;
+}
 .team .team-slider {
   flex: 1;
   width: 100%;
@@ -292,6 +301,10 @@ body {
     transform: skewY(0deg);
     /* Standard syntax */
   }
+  .fa {
+    font-size: 2em;
+    margin: 1vmin;
+  }
 }
 @media (orientation: portrait) {
   .grid {
@@ -366,6 +379,10 @@ body {
     /* Safari */
     transform: skewY(0deg);
     /* Standard syntax */
+  }
+  .fa {
+    font-size: 3em;
+    margin: 1vmin;
   }
 }
 .item:last-child .inner {

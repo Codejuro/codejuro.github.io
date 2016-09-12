@@ -6,7 +6,7 @@ title: Codejuro
   <head>
     <meta charset="UTF-8"/>
     <title>{{ page.title }}</title>
-    <link href="/styles.css" rel="stylesheet"/>
+    <script src="https://use.fontawesome.com/bebb4991cd.js"></script>
     <script
 	src="https://code.jquery.com/jquery-3.1.0.slim.js"
 	integrity="sha256-L6ppAjL6jgtRmfiuigeEE5AwNI2pH/X9IBbPyanJeZw="
@@ -14,6 +14,7 @@ title: Codejuro
     <script src="flowtype.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Hind+Siliguri|Montserrat|Oswald" rel="stylesheet">
     <link href="http://fonts.googleapis.com/earlyaccess/notosansbengaliui.css" rel="stylesheet"/>
+    <link href="/styles.css" rel="stylesheet"/>
   </head>
   <body>
     <div class="grid">
@@ -51,6 +52,11 @@ title: Codejuro
                   </div>
                   <div class="title">{{ member.title }}</div>
                   <div class="subtitle">{{ member.position }}</div>
+                  <div class="social">
+                    {% for net in member.social %}
+                    <a class="socicon" href="{{ net.url }}"><i class="fa fa-{{ net.title }}"></i></a>
+                    {% endfor %}
+                  </div>
                 </div>
                 {% endfor %}
                 <div class="team-slider">

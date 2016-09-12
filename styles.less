@@ -199,6 +199,17 @@ body {
             font-size: 2em;
             color: @yellow;
         }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .socicon {
+                color: white;
+                text-decoration: none;
+            }
+        }
     }
     
     .team-slider {
@@ -233,6 +244,8 @@ body {
                     font-size: 1.5em;
                     font-family: @header-font;
                 }
+
+ 
             }
 
             .tm-item-selected {
@@ -355,6 +368,11 @@ body {
         -webkit-transform: skewY(0deg); /* Safari */
         transform: skewY(0deg); /* Standard syntax */
     }
+
+    .fa {
+        font-size: 2em;
+        margin: 1vmin;
+    }
 }
 
 @media (orientation : portrait) {
@@ -434,6 +452,10 @@ body {
         transform: skewY(0deg); /* Standard syntax */
     }
 
+    .fa {
+        font-size: 3em;
+        margin: 1vmin;
+    }
 }
 
 .item:last-child .inner {
