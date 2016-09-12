@@ -1,8 +1,9 @@
 ---
 layout: team
 title: "Utsargo Roy"
-pic: "3.jpg"
+pic: "/img/team/3.jpg"
 position: "Lead UX Designer"
+shortname: "Utsargo"
 social:
   - title: facebook
     url: https://www.facebook.com/utsargo.roy

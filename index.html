@@ -1,8 +1,22 @@
 ---
-layout: default
-title: "Codejuro"
+title: Codejuro
 ---
-<div class="grid">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>{{ page.title }}</title>
+    <link href="/styles.css" rel="stylesheet"/>
+    <script
+	src="https://code.jquery.com/jquery-3.1.0.slim.js"
+	integrity="sha256-L6ppAjL6jgtRmfiuigeEE5AwNI2pH/X9IBbPyanJeZw="
+	crossorigin="anonymous"></script>
+    <script src="flowtype.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Hind+Siliguri|Montserrat|Oswald" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosansbengaliui.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="grid">
       <div id="main" class="item expanded">
         <div class="inner">
           <div class="section-title">
@@ -27,91 +41,96 @@ title: "Codejuro"
           <div class="section-content skew">
             <div class="team">
               {% for member in site.team %}
-              {{ member.title }}
-              <div class="profile {% if forloop.first == true %} prof-current {% endif %}">
-                <div class="img-wrapper">
-                  <img alt="" src="/img/team/{{ member.pic }}"/>
-                </div>
-                <div class="title">{{ member.title }}</div>
-                <div class="subtitle">{{ member.position }}</div>
-              </div>
-              {% endfor %}
-              <div class="team-slider">
-                <div class="tm-items">
-                  {% for member in site.team %}
-                  <div class="tm-item" onclick="currentDiv({{ forloop.index | plus:'1' }})">
-                    <div class="tm-item-title">{{ member.title }}</div>
-                    <div class="tm-item-subtitle">{{ member.position }}</div>
+              {% if forloop.first == true %}
+              <div class="profile prof-current">
+                {% else %}
+                <div class="profile">
+                  {% endif %}
+                  <div class="img-wrapper">
+                    <img alt="" src="{{ member.pic }}"/>
                   </div>
-                  {% endfor %}
+                  <div class="title">{{ member.title }}</div>
+                  <div class="subtitle">{{ member.position }}</div>
                 </div>
-                <div class="tm-sld-nav tm-sld-nav-right"></div>
+                {% endfor %}
+                <div class="team-slider">
+                  <div class="tm-items">
+                    {% for member in site.team %}
+                    <div class="tm-item" onclick="currentDiv({{ forloop.index | plus:'1' }})">
+                      <div class="tm-item-title">{{ member.shortname }}</div>
+                      <div class="tm-item-subtitle">{{ member.position }}</div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <div class="tm-sld-nav tm-sld-nav-right"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="portfolio" class="item">
-        <div class="inner">
-          <div class="section-title">Portfolio</div>
-          <div class="section-content"><h1>Coming Soon...</h1></div>
-        </div>
-      </div>
-      <div id="contact" class="item">
-        <div class="inner">
-          <div class="section-title">Contact</div>
-          <div class="section-content">
-            <form class="contact" name="sentMessage" id="contactForm" action="https://formspree.io/codejuro@gmail.com" method="POST" novalidate>
-              <input type="hidden" name="_next" value="{{ site.url }}?success=1" />
-              <input class="cinp" name="name" type="text" value="" placeholder="Name" required data-validation-required-message="Please enter your name."/>
-              <input class="cinp" name="email" type="text" value="" placeholder="Email Address"
-              required data-validation-required-message="Please enter your email."/>
-              <input class="cinp" name="contact-no" type="text" value="" placeholder="Contact Number(Optional)"/>
-              <textarea class="cinp" name="body" placeholder="Please let us know what you want to say." required data-validation-required-message="Please say something."></textarea>
-              <input class="cinp submit" type="submit" value="Send">
-            </form>
+        <div id="portfolio" class="item">
+          <div class="inner">
+            <div class="section-title">Portfolio</div>
+            <div class="section-content"><h1>Coming Soon...</h1></div>
           </div>
-      </div>
-    </div>
-  <script>
-     $('.item').click(function(e){
-       $('.item').removeClass('expanded');
-       $(this).addClass('expanded');
-     });
+        </div>
+        <div id="contact" class="item">
+          <div class="inner">
+            <div class="section-title">Contact</div>
+            <div class="section-content">
+              <form class="contact" name="sentMessage" id="contactForm" action="https://formspree.io/codejuro@gmail.com" method="POST" novalidate>
+                <input type="hidden" name="_next" value="{{ site.url }}?success=1" />
+                <input class="cinp" name="name" type="text" value="" placeholder="Name" required data-validation-required-message="Please enter your name."/>
+                <input class="cinp" name="email" type="email" value="" placeholder="Email Address"
+                       required data-validation-required-message="Please enter your email."/>
+                <input class="cinp" name="contact-no" type="text" value="" placeholder="Contact Number(Optional)"/>
+                <textarea class="cinp" name="body" placeholder="Please let us know what you want to say." required data-validation-required-message="Please say something."></textarea>
+                <input class="cinp submit" type="submit" value="Send">
+              </form>
+            </div>
+          </div>
+        </div>
+        <script>
+         $('.item').click(function(e){
+           $('.item').removeClass('expanded');
+           $(this).addClass('expanded');
+         });
         </script>
-  <script>
-     var slideIndex = 0;
-     carousel();
+        <script>
+         var slideIndex = 0;
+         carousel();
 
-     function currentDiv(n) {
-       showDivs(slideIndex = n);
-     }
-     
-     function showDivs(n) {
-       var i;
-       var x = document.getElementsByClassName("profile");
-       var dots = document.getElementsByClassName("tm-item");
-       if (n > x.length) {slideIndex = 1}
-       if (n < 1) {slideIndex = x.length}
-       for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-       }
-       for (i = 0; i < dots.length; i++) {
-         dots[i].className = dots[i].className.replace(" tm-item-selected", "");
+         function currentDiv(n) {
+           showDivs(slideIndex = n);
+         }
+         
+         function showDivs(n) {
+           var i;
+           var x = document.getElementsByClassName("profile");
+           var dots = document.getElementsByClassName("tm-item");
+           if (n > x.length) {slideIndex = 1}
+           if (n < 1) {slideIndex = x.length}
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" tm-item-selected", "");
 
-       }
-       x[slideIndex-1].style.display = "flex";
-       dots[slideIndex-1].className += " tm-item-selected";
-     };
+           }
+           x[slideIndex-1].style.display = "flex";
+           dots[slideIndex-1].className += " tm-item-selected";
+         };
 
-     function carousel() {
-       showDivs(slideIndex += 1);
-       setTimeout(carousel, 5000);
-     }
+         function carousel() {
+           showDivs(slideIndex += 1);
+           setTimeout(carousel, 5000);
+         }
 
-     $(function() {
-       if(window.location.hash){
-         window.location.href = window.location.href.replace(/#.*/,'');
-       };
-     });
-    </script>
+         $(function() {
+           if(window.location.hash){
+             window.location.href = window.location.href.replace(/#.*/,'');
+           };
+         });
+        </script>
+  </body>
+</html>

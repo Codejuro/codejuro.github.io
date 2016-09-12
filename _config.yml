@@ -1,5 +1,5 @@
-url: http://codejuro.com
-
+# url: http://codejuro.com
+url: http://localhost:4000
 # Site settings
 title: Codejuro
 email: codejuro@gmail.com
@@ -23,8 +23,5 @@ kramdown:
   hard_wrap: true
 permalink: pretty
 highlighter: rouge
-
 collections:
-- timeline
-- portfolio
 - team

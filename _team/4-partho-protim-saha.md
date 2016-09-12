@@ -1,8 +1,9 @@
 ---
 layout: team
 title: "Partho Protim Saha"
-pic: "4.jpg"
+pic: "/img/team/4.jpg"
 position: "Art Advisor"
+shortname: "Partho"
 social:
   - title: facebook
     url: https://www.facebook.com/partho.protimsaha

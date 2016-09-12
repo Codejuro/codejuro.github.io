@@ -1,8 +1,9 @@
 ---
 layout: team
 title: "Utsob Roy"
-pic: "1.jpg"
+pic: "/img/team/1.jpg"
 position: "Code Maestro"
+shortname: "Utsob"
 social:
   - title: twitter
     url: https://twitter.com/uroybd
