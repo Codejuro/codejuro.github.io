@@ -448,6 +448,9 @@ body {
   .keyword {
     font-size: 1.5em;
   }
+  .contact .cinp {
+    font-size: 1.5em;
+  }
 }
 .item:last-child .inner {
   border: none;
