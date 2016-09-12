@@ -1,0 +1,32 @@
+@primary-font: "Noto Sans Bengali UI", 'Montserrat', sans-serif;
+@header-font:"Comfortaa", sans-serif;
+@yellow: rgba(251,176,64, 1);
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.placeholder(@rules){
+   &::-webkit-input-placeholder{
+      @rules();
+   }
+
+   &:-moz-placeholder{
+      @rules();
+   }
+
+   &::-moz-placeholder{
+      @rules();
+   }
+
+   &:-ms-input-placeholder{
+      @rules();
+   }
+}
