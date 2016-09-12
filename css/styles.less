@@ -297,6 +297,25 @@ body {
 }
 
 
+@media all and (min-width: 960px) {
+	body{
+		font-size: 18px;
+	}
+}
+
+@media all and (max-width: 959px) and (min-width: 600px) {
+	body{
+		font-size: 16px;
+	}
+}
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+	body{
+		font-size: 12px;
+	}
+
+}
+
 @media (orientation: landscape) {
     .item {
         height: 100%;
@@ -473,23 +492,4 @@ body {
 
 .item:last-child .inner {
     border: none;
-}
-
-@media all and (min-width: 960px) {
-	body{
-		font-size: 18px;
-	}
-}
-
-@media all and (max-width: 959px) and (min-width: 600px) {
-	body{
-		font-size: 16px;
-	}
-}
-
-@media all and (max-width: 599px) and (min-width: 320px) {
-	body{
-		font-size: 12px;
-	}
-
 }
