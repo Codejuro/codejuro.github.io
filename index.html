@@ -1,18 +1,7 @@
-<html>
-  <head>
-    <meta charset="UTF-8"/>
-    <title>Flexed Fantasy</title>
-    <link href="/styles.css" rel="stylesheet"/>
-    <script
-	src="https://code.jquery.com/jquery-3.1.0.slim.js"
-	integrity="sha256-L6ppAjL6jgtRmfiuigeEE5AwNI2pH/X9IBbPyanJeZw="
-	crossorigin="anonymous"></script>
-    <script src="flowtype.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Comfortaa|Hind+Siliguri|Montserrat|Oswald" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/earlyaccess/notosansbengaliui.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <div class="grid">
+---
+layout: default
+---
+<div class="grid">
       <div id="main" class="item expanded">
         <div class="inner">
           <div class="section-title">
@@ -82,13 +71,13 @@
           </div>
       </div>
     </div>
-    <script>
+  <script>
      $('.item').click(function(e){
        $('.item').removeClass('expanded');
        $(this).addClass('expanded');
      });
-    </script>
-    <script>
+        </script>
+  <script>
      var slideIndex = 0;
      carousel();
 
@@ -124,5 +113,3 @@
        };
      });
     </script>
-  </body>
-</html>
