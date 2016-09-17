@@ -303,6 +303,9 @@ body {
   body {
     font-size: 12px;
   }
+  .contact {
+    display: none !important;
+  }
 }
 @media (orientation: landscape) {
   .item {
