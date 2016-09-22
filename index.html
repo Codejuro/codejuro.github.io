@@ -104,12 +104,22 @@ title: Codejuro
           </div>
         </div>
         <script>
+         function capitalizeFirstLetter(string) {
+           return string.charAt(0).toUpperCase() + string.slice(1);
+         }
+         
          $('.item').click(function(e){
            $('.item').removeClass('expanded');
            $(this).addClass('expanded');
+           if (this.id != "main"){
+             window.history.pushState(this.id, this.id, '/?sec=' + this.id);
+             document.title = capitalizeFirstLetter(this.id) + " - {{ site.title }}"
+           } else {
+             window.history.pushState(this.id, this.id, '/');
+             document.title = "{{ site.title }} - {{ site.description }}"
+           }
          });
-        </script>
-        <script>
+
          var slideIndex = 0;
          carousel();
 
@@ -154,7 +164,23 @@ title: Codejuro
            if (!results[2]) return '';
            return decodeURIComponent(results[2].replace(/\+/g, " "));
          }
-
+         
+         sec = getParameterByName('sec')
+         if( sec != null) {
+           $('.item').removeClass('expanded');
+           $("#" + sec).addClass('expanded');
+           if ($.inArray(sec, ["main", "team", "portfolio", "contact"]) != -1) {
+             if (sec == "main") {
+               document.title = "{{ site.title }} - {{ site.description }}";
+             } else {
+               document.title = capitalizeFirstLetter(sec) + " - {{ site.title }}";
+             }
+           } else {
+             $("#main").addClass('expanded');
+             window.history.pushState(this.id, this.id, '/');
+           }
+         }
+         
          if (getParameterByName('success') == "1") {
            $('.item').removeClass('expanded');
            $('#contact').addClass('expanded');
