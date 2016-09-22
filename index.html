@@ -113,10 +113,14 @@ title: Codejuro
            $(this).addClass('expanded');
            if (this.id != "main"){
              window.history.pushState(this.id, this.id, '/?sec=' + this.id);
-             document.title = capitalizeFirstLetter(this.id) + " - {{ site.title }}"
+             document.title = capitalizeFirstLetter(this.id) + " - {{ site.title }}";
+             $("meta[property='og\\:title']").attr("content", capitalizeFirstLetter(this.id) + " - {{ site.title }}");
+             $("meta[property='og\\:url']").attr("content", "http://codejuro.com/?sec=" + this.id);
            } else {
              window.history.pushState(this.id, this.id, '/');
-             document.title = "{{ site.title }} - {{ site.description }}"
+             document.title = "{{ site.title }} - {{ site.description }}";
+             $("meta[property='og\\:title']").attr("content",  "{{ site.title }}");
+             $("meta[property='og\\:url']").attr("content", "http://codejuro.com");
            }
          });
 
@@ -172,8 +176,12 @@ title: Codejuro
            if ($.inArray(sec, ["main", "team", "portfolio", "contact"]) != -1) {
              if (sec == "main") {
                document.title = "{{ site.title }} - {{ site.description }}";
+               $("meta[property='og\\:title']").attr("content", "{{ site.title }}");
+             $("meta[property='og\\:url']").attr("content", "http://codejuro.com");
              } else {
                document.title = capitalizeFirstLetter(sec) + " - {{ site.title }}";
+               $("meta[property='og\\:title']").attr("content", capitalizeFirstLetter(this.id) + " - {{ site.title }}");
+             $("meta[property='og\\:url']").attr("content", "http://codejuro.com/?sec=" + this.id);
              }
            } else {
              $("#main").addClass('expanded');
